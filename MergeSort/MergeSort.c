@@ -88,6 +88,9 @@ int main(int args, char* argv[]) {
     
     // 배열 생성 및 정의
     int arr[] = {37, 10, 22, 30, 35, 13, 25, 24};
+	
+    // 기존 배열 출력
+    printArr(arr);
 
     // mergeSort 함수 호출
     // 생성한 배열, 첫번째 인덱스와 마지막 인덱스를 파라미터로 보낸다.
