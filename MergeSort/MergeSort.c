@@ -1,5 +1,7 @@
 #include <stdio.h>
-#define MAX 8 // 배열의 길이
+#include <time.h>
+#include <string.h>
+#define MAX 12 // 배열의 길이
 
 // 배열을 순서대로 출력하는 함수
 void printArr(int list[]) {
@@ -87,17 +89,30 @@ void mergeSort(int list[], int first, int last) {
 int main(int args, char* argv[]) {
     
     // 배열 생성 및 정의
-    int arr[] = {37, 10, 22, 30, 35, 13, 25, 24};
+    int arr[] = {6, 3, 11, 9, 12, 2, 8, 15, 18, 10, 7, 14};
 	
     // 기존 배열 출력
     printArr(arr);
 
-    // mergeSort 함수 호출
-    // 생성한 배열, 첫번째 인덱스와 마지막 인덱스를 파라미터로 보낸다.
-    mergeSort(arr, 0, MAX - 1);
+    clock_t start, end; // 시간 측정을 위한 변수
+    start = clock(); // 시간 측정 시작
+
+    for(int i = 0; i < 10000000; i++) {
+        int testArr[MAX]; // 정렬된 배열을 저장할 배열
+        memcpy(testArr, arr, sizeof(arr)); // 원본 배열을 복사
+
+        // mergeSort 함수 호출
+        // 생성한 배열, 첫번째 인덱스와 마지막 인덱스를 파라미터로 보낸다.
+        mergeSort(testArr, 0, MAX - 1);     
+
+        memcpy(arr, testArr, sizeof(arr)); // 다시 원본 배열로 복사
+    }
+
+    end = clock(); // 시간 측정 종료
 
     // 정렬된 함수를 출력한다.
     printArr(arr);
+    printf("Time: %f\n", (double)(end - start) / CLOCKS_PER_SEC); // 시간 출력
 
     return 0;
 }
