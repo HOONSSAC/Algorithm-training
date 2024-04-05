@@ -31,10 +31,6 @@ void Prim(int n, int graph[n][n]) {
                 parent[v] = u, key[v] = graph[u][v];
     }
 
-    // 최소 스패닝 트리 출력
-    printf("Edge \tWeight\n");
-    for (int i = 1; i < n; i++)
-        printf("%d - %d \t%d \n", parent[i], i, graph[i][parent[i]]);
 }
 
 void PrimMST(int n, int m){
@@ -59,6 +55,9 @@ void PrimMST(int n, int m){
         printf("%d. random edge : (%d,%d), weight: %d\n", i+1, a, b, weight);
     }
 
+    printf("\nNumber of Vertices: %d\n", n);
+    printf("Number of Edges: %d\n\n", m);
+
     // 인접 행렬 출력
     printf("\nGenerated Adjacency Matrix:\n");
     for (int i = 0; i < n; i++) {
@@ -69,6 +68,5 @@ void PrimMST(int n, int m){
     }
 
     // 프림 알고리즘 실행
-    printf("\nPrim's Algorithm: Minimum Spanning Tree\n");
     Prim(n, graph);
 }

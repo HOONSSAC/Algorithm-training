@@ -36,7 +36,7 @@ int compare(const void* a, const void* b){
 void KruskalMST(int n, int m) {
     Edge edges[m]; // 간선 정보를 저장할 배열
 
-    int exists[11][11]; // 이미 존재하는 간선을 확인하기 위한 배열, 정점의 수 + 1로 크기 설정
+    int exists[EDGE_COUNT][EDGE_COUNT]; // 이미 존재하는 간선을 확인하기 위한 배열, 정점의 수 + 1로 크기 설정
     memset(exists, 0, sizeof(exists)); // exists 배열을 0으로 초기화
 
     printf("Random Matrix Generation !!\n");
