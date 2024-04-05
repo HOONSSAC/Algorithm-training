@@ -2,7 +2,6 @@
 #include <time.h>
 #include "setting.h"
 
-
 // 랜덤으로 pivot을 선택하는 함수
 int PartitionRandomPivot(int arr[], int left, int right) {
     
