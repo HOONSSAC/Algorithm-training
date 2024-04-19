@@ -159,14 +159,17 @@ void printCodes(struct MinHeapNode* root, int arr[], int top, char codes[ALPHABE
 
   // 리프 노드인 경우
   if (isLeaf(root)) {
+    printf("%c: ", root->item);
     char tempCode[MAX_TREE_HT]; // 임시 코드 배열
 
     for (int i = 0; i < top; ++i) {
+      printf("%d", arr[i]);
       tempCode[i] = arr[i] + '0'; // 숫자를 문자로 변환하여 저장
     }
   
     tempCode[top] = '\0'; // 문자열 종료
     strcpy(codes[root->item - 'a'], tempCode); // 코드 배열에 복사
+    printf("\n");
   }
 }
 
