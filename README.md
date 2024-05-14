@@ -6,3 +6,4 @@
 - Dijkstra
 - SetCovering
 - Huffman Code
+- Floyd Warshall
