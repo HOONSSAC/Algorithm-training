@@ -1,4 +1,4 @@
-# Algorithm-training
+# 🛠️Algorithm-training
 - MergeSort
 - QuickSort
 - SelectionSort
