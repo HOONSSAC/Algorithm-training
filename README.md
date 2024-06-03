@@ -8,3 +8,4 @@
 - Huffman Code
 - Floyd Warshall
 - Chained Matrix Multiplication
+- Knapsack
