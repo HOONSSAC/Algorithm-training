@@ -149,7 +149,7 @@ int main() {
     int* cover_greedy = vertex_cover_greedy(g);
     int cover_size_greedy = 0; // Greedy 방식으로 계산된 vertex cover의 크기
     while (cover_greedy[cover_size_greedy] != '\0') cover_size_greedy++;
-    printf("\nGreedy 방식\n");
+    printf("\n가장 많은 edge를 가지는 vertex를 우선 선택하는 방식\n");
     print_cover(cover_greedy, cover_size_greedy); // Greedy 방식으로 계산된 vertex cover 출력
     free(cover_greedy); // 동적할당된 메모리 해제
 
