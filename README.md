@@ -1,11 +1,12 @@
 # 🛠️Algorithm-training
-- MergeSort
-- QuickSort
-- SelectionSort
+- Merge Sort
+- Quick Sort
+- Selection Sort
 - MST
 - Dijkstra
-- SetCovering
+- Set Covering
 - Huffman Code
 - Floyd Warshall
 - Chained Matrix Multiplication
 - Knapsack
+- Vertex Covering
